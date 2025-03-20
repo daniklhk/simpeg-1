@@ -37,6 +37,66 @@ h6 {
   font-family: "Nunito", sans-serif;
 }
 
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* Teks putih */
+  background-color: #ffc107; /* Warna latar kuning */
+  border: none;
+  border-radius: 30px; /* Sudut melengkung lebih besar */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow untuk efek 3D */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-button i {
+  margin-right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: #e0a800; /* Warna lebih gelap saat hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Shadow lebih besar saat hover */
+  transform: translateY(-2px); /* Efek naik sedikit saat hover */
+}
+
+.icon-button:hover i {
+  transform: rotate(45deg); /* Ikon berputar saat hover */
+}
+
+.icon-button:active {
+  transform: translateY(0); /* Kembali ke posisi awal saat diklik */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow kembali normal */
+}
+
+/* Efek ripple saat tombol diklik */
+.icon-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.icon-button:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 0s, opacity 0s;
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -624,6 +684,8 @@ section {
 .about .btn-read-more:hover i {
   transform: translateX(5px);
 }
+
+
 
 /*--------------------------------------------------------------
 # Values
