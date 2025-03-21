@@ -55,6 +55,7 @@ h6 {
   overflow: hidden;
 }
 
+
 .icon-button i {
   margin-right: 10px;
   font-size: 18px;
@@ -92,6 +93,66 @@ h6 {
 }
 
 .icon-button:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 0s, opacity 0s;
+}
+
+.icon-button-small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px; /* Padding lebih kecil */
+  font-size: 14px; /* Ukuran font lebih kecil */
+  font-weight: bold;
+  color: #fff; /* Teks putih */
+  background-color: #ffc107; /* Warna latar kuning */
+  border: none;
+  border-radius: 20px; /* Sudut melengkung lebih kecil */
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Shadow lebih kecil */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-button-small i {
+  margin-right: 8px; /* Jarak ikon dan teks lebih kecil */
+  font-size: 16px; /* Ukuran ikon lebih kecil */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-button-small:hover {
+  background-color: #e0a800; /* Warna lebih gelap saat hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Shadow lebih besar saat hover */
+  transform: translateY(-2px); /* Efek naik sedikit saat hover */
+}
+
+.icon-button-small:hover i {
+  transform: scale(1.1); /* Ikon membesar sedikit saat hover */
+}
+
+.icon-button-small:active {
+  transform: translateY(0); /* Kembali ke posisi awal saat diklik */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Shadow kembali normal */
+}
+
+/* Efek ripple saat tombol diklik */
+.icon-button-small::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.icon-button-small:active::after {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   transition: transform 0s, opacity 0s;
@@ -313,17 +374,18 @@ section {
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #F1F5F3;
+  background: #ffc107; /* Warna kuning sebagai latar belakang awal */
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
-  color: #fff;
+  color: #fff; /* Warna teks putih */
+  transition: background 0.3s ease, color 0.3s ease; /* Efek transisi halus */
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-  color: #fff;
-  background: #ffc107;
+  color: #fff; /* Warna teks tetap putih saat hover */
+  background: #e0a800; /* Warna kuning yang lebih gelap saat hover */
 }
 
 .navbar .dropdown ul {
@@ -887,18 +949,18 @@ section {
 .services .service-box {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
   height: 100%;
-  padding: 60px 30px;
+  padding: 20px 10px; /* Padding diperkecil */
   text-align: center;
   transition: 0.3s;
   border-radius: 5px;
 }
 
 .services .service-box .icon {
-  font-size: 36px;
-  padding: 40px 20px;
+  font-size: 28px; /* Ukuran ikon diperkecil */
+  padding: 20px 10px; /* Padding ikon diperkecil */
   border-radius: 4px;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 15px; /* Margin bawah diperkecil */
   display: inline-block;
   line-height: 0;
   transition: 0.3s;
@@ -907,6 +969,7 @@ section {
 .services .service-box h3 {
   color: #444444;
   font-weight: 700;
+  margin-bottom: 10px; /* Margin bawah diperkecil */
 }
 
 .services .service-box .read-more {
@@ -914,16 +977,17 @@ section {
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 16px;
-  padding: 8px 20px;
+  font-size: 14px; /* Ukuran font diperkecil */
+  padding: 6px 16px; /* Padding diperkecil */
 }
 
 .services .service-box .read-more i {
   line-height: 0;
-  margin-left: 5px;
-  font-size: 18px;
+  margin-left: 4px; /* Margin kiri diperkecil */
+  font-size: 16px; /* Ukuran ikon diperkecil */
 }
 
+/* Warna dan efek hover untuk tiap jenis box */
 .services .service-box.blue {
   border-bottom: 3px solid #2db6fa;
 }
