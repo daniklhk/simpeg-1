@@ -28,129 +28,252 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <style type="text/css">
-    /* Full Screen Background Styles */
-body {
+    /* ===== GLOBAL STYLES ===== */
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: "Nunito", sans-serif;
-  overflow-x: hidden;
 }
 
-/* Hero Section - Full Screen Background */
-#hero {
-  background: linear-gradient(rgba(0, 155, 79, 0.8), rgba(0, 155, 79, 0.9)), 
-              url('../img/background.jpg') no-repeat center center fixed;
+body {
+  background: linear-gradient(rgba(0, 155, 79, 0.4), rgba(0, 155, 79, 0.9)), 
+              url('../img/background.png') no-repeat center center;
   background-size: cover;
-  min-height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== LAYOUT STRUCTURE ===== */
+#main {
+  flex: 1;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
-/* Container adjustments */
-#hero > .container {
+.container {
   width: 100%;
-  padding: 20px;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-/* Card styling */
-#hero .card {
-  border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+#hero > .container > .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ===== HERO SECTION ===== */
+#hero {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: calc(100vh - 2rem);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .compact-login-card {
+    max-width: 320px;
+    margin: 1rem auto;
+  }
+  
+  .compact-logo-img {
+    height: 45px;
+  }
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+#hero .row.justify-content-center {
+  width: 100%;
+}
+
+/* ===== LOGIN CARD ===== */
+.login-card {
+  width: 90%;
+  max-width: 420px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border: none;
+  position: relative;
+  z-index: 10;
+  margin-top: -20px;
+  padding-top: 1.5rem;
+  overflow: hidden;
 }
 
-/* Logo styling */
+.login-card .card-body {
+  padding: 1.75rem;
+}
+
+.login-card .card-header {
+  background: #009B4F;
+  color: white;
+  padding-bottom: 1.5rem;
+}
+
+.login-card .logo-img {
+  height: 70px;
+  width: auto;
+}
+
+.login-card .logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.login-card .card-body {
+  padding: 2rem;
+}
+
+/* ===== LOGO STYLES ===== */
 .logo-container {
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
+  transform: translateY(10%);
+  transition: all 0.3s ease;
 }
 
 .logo-img {
-  max-height: 80px;
-  margin-bottom: 15px;
+  max-height: 60px;
+  width: auto;
+  margin-bottom: 0.5rem;
 }
 
 .logo-text {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-}
-
-/* Form text */
-#hero .text-center.small {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-/* Input fields */
-#hero .form-control {
-  border-radius: 5px;
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-}
-
-#hero .input-group-text {
-  background-color: #009B4F;
-  color: white;
-  border: none;
-}
-
-/* Button styling */
-.icon-button-login {
-  background-color: #009B4F;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
+  font-size: 1.25rem;
   font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  margin-top: 0.5rem;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.login-card .form-control {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.login-card .btn {
+  padding: 0.65rem;
+  font-size: 0.95rem;
+}
+
+/* Password toggle button styling */
+.toggle-password {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  border-left: none !important;
+}
+
+.toggle-password:hover {
+  background-color: #e9ecef;
+}
+
+.toggle-password i {
   transition: all 0.3s;
 }
 
-.icon-button-login:hover {
-  background-color: #007a3d;
-  transform: translateY(-2px);
-}
-
-/* Forgot password link */
-#hero a {
+/* Eye icon when password is visible */
+.password-visible i {
   color: #009B4F;
-  text-decoration: none;
 }
 
-/* CAPTCHA styling */
-.captcha-image img {
-  border-radius: 5px;
-  border: 1px solid #ddd;
+/* ===== ANIMATIONS ===== */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
-/* Responsive adjustments */
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(10%); }
+  50% { transform: translateY(15%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 576px) {
+  .login-card {
+    width: 100%;
+    animation: fadeInUp 0.5s ease-out;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-card {
+    margin: 3rem auto;
+  }
+}
+
 @media (max-width: 768px) {
   #hero {
-    padding: 30px 0;
+    padding: 1rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   
-  .logo-img {
-    max-height: 60px;
+  .container {
+    padding: 0 10px;
   }
   
-  .logo-text {
-    font-size: 20px;
-  }
-  
-  #hero > .container {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 576px) {
-  #hero .card {
-    margin: 0 10px;
+  .logo-container {
+    margin-bottom: 0.5rem;
+    transform: translateY(5%);
   }
   
   .logo-img {
     max-height: 50px;
   }
+  
+  .logo-text {
+    font-size: 1.1rem;
+  }
 }
+
+/* Compact Card Styling */
+.compact-login-card {
+  max-width: 360px;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.compact-logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.compact-logo-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+
   </style>
 
 </head>
@@ -158,31 +281,25 @@ body {
 <body>
 
   <main id="main">
+
   <div class="container">
+    <section id="hero" class="hero d-flex align-items-center justify-content-center py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6">
 
-      <section id="hero" class="hero section register min-vh-100 flex-column align-items-center justify-content-center py-4">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="compact-login-card card shadow-sm">
 
-              <div class="d-flex justify-content-center py-4">
-                <div class="logo-container text-center">
-                  <a href="index.html" class="logo d-flex flex-column align-items-center">
-                    <img src="assets/img/logo.png" alt="Logo SIMPEG KEMENHUT" class="logo-img">
-                    <span class="logo-text">SIMPEG KEMENHUT</span>
-                  </a>
-                </div>
-              </div><!-- End Logo -->
-
-              <div class="card mb-3">
-
-                <div class="card-body">
-
-                  <div class="pt-4 pb-2">
-                    <p class="text-center small">Silahkan masukkan NIP & Password anda</p>
+                <!-- Header Card dengan Logo -->
+                <div class="card-header bg-transparent border-bottom-0 text-center pt-3 pb-0">
+                  <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="Logo" class="compact-logo-img mb-1">
+                    <h3 class="compact-logo-text">SIMPEG KEMENHUT</h3>
                   </div>
+                </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <!-- Form -->
+                  <div class="card-body px-3 py-3">
+                  <form class="row g-2 needs-validation" novalidate>
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">NIP</label>
@@ -195,8 +312,13 @@ body {
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">incorrect password!</div>
+                      <div class="input-group">
+                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                          <i class="bi bi-eye"></i>
+                        </button>
+                        <div class="invalid-feedback">incorrect password!</div>
+                      </div>
                     </div>
 
                     <div class="col-12">
@@ -314,6 +436,29 @@ body {
       alert('Harap lengkapi semua field!');
     }
   });
+</script>
+
+<!-- Icon Mata -->
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+  const togglePassword = document.querySelector('.toggle-password');
+  const passwordInput = document.getElementById('yourPassword');
+  
+  if (togglePassword && passwordInput) {
+    togglePassword.addEventListener('click', function() {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      
+      // Toggle icon
+      const icon = this.querySelector('i');
+      icon.classList.toggle('bi-eye');
+      icon.classList.toggle('bi-eye-slash');
+      
+      // Toggle active state
+      this.classList.toggle('password-visible');
+    });
+  }
+});
 </script>
 
   <!-- Template Main JS File -->

@@ -1,0 +1,189 @@
+/* ===== GLOBAL STYLES ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(0, 155, 79, 0.4), rgba(0, 155, 79, 0.9)), 
+              url('../img/background.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== LAYOUT STRUCTURE ===== */
+#main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#hero > .container > .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ===== HERO SECTION ===== */
+#hero {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+#hero .row.justify-content-center {
+  width: 100%;
+}
+
+/* ===== LOGIN CARD ===== */
+.login-card {
+  width: 90%;
+  max-width: 380px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  position: relative;
+  z-index: 10;
+  margin-top: -20px;
+  padding-top: 1.5rem;
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+.login-card .card-body {
+  padding: 1.75rem;
+}
+
+/* ===== LOGO STYLES ===== */
+.logo-container {
+  margin-bottom: 1rem;
+  transform: translateY(10%);
+  transition: all 0.3s ease;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+.logo-img {
+  max-height: 60px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  margin-top: 0.5rem;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.login-card .form-control {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.login-card .btn {
+  padding: 0.65rem;
+  font-size: 0.95rem;
+}
+
+.toggle-password {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  border-left: none !important;
+  padding: 0 0.75rem;
+}
+
+.toggle-password:hover {
+  background-color: #e9ecef;
+}
+
+.toggle-password i {
+  transition: all 0.3s;
+}
+
+.password-visible i {
+  color: #009B4F;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(10%); }
+  50% { transform: translateY(15%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 576px) {
+  .login-card {
+    width: 100%;
+    animation: fadeInUp 0.5s ease-out;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-card {
+    margin: 3rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 1rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .logo-container {
+    margin-bottom: 0.5rem;
+    transform: translateY(5%);
+  }
+  
+  .logo-img {
+    max-height: 50px;
+  }
+  
+  .logo-text {
+    font-size: 1.1rem;
+  }
+}
