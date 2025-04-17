@@ -246,8 +246,42 @@ h6 {
   box-shadow: 0 0 5px rgba(121, 156, 139, 0.5);
 }
 
+/* Modal Styling */
+.modal-content {
+  border-radius: 10px;
+}
 
+.modal-header {
+  background-color: #009B4F;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
 
+.modal-title {
+  font-weight: 600;
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+#submitForgotPassword {
+  background-color: #009B4F;
+  border-color: #009B4F;
+}
+
+#submitForgotPassword:hover {
+  background-color: #007a3d;
+  border-color: #007a3d;
+}
+
+/* Info Box Styling */
+.info-box {
+  background-color: rgba(0, 155, 79, 0.2); /* Biru dengan opacity 30% */
+  border-radius: 5px;
+  border-left: 3px solid #00fc81;
+  font-size: 0.8rem;
+}
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
