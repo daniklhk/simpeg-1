@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SIMPEG KEHUTANAN</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); z-index: 9998; display: flex; justify-content: center; align-items: center;">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Error Notification -->
+  <div id="api-error" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #ff4444; color: white; padding: 15px; border-radius: 5px; z-index: 9999;"></div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span>KEHUTANAN</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- Menu akan diisi oleh JavaScript -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Transformasi Digital <br> Biro SDMO Kehutanan</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Integrasi sistem kepegawaian secara online untuk efisiensi layanan ASN.</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#services" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Layanan Kami</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Tentang kami</h3>
+              <h2>SIMPEG KLHK</h2>
+              <p id="about-description">
+                <!-- Akan diisi oleh JavaScript -->
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="https://ropeg.menlhk.go.id/" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Read More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img id="about-image" src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>***</h2>
+          <p>Layanan Kami</p>
+        </header>
+        <div class="row gy-4" id="services-container">
+          <!-- Akan diisi oleh JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>***</h2>
+          <p>Statistik Kepegawaian</p>
+          <h2 id="stats-containertgl"></h2>
+        </header> 
+        <div class="row gy-4" id="stats-container">
+          <!-- Akan diisi oleh JavaScript -->
+        </div>
+        <br><br>
+        <div class="section-header">
+          <a href="https://ropeg.menlhk.go.id/Dashboard/" target="_blank"><button class="icon-button"><i class="fa fa-chart-pie"></i>Dashboard Statistik</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>***</h2>
+          <p>Buku Saku</p>
+        </header>
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>SIMPEG</h3>
+            <div class="accordion accordion-flush" id="faqlist1">
+              <!-- Akan diisi oleh JavaScript -->
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3>SIASN</h3>
+            <div class="accordion accordion-flush" id="faqlist2">
+              <!-- Akan diisi oleh JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>***</h2>
+          <p>Pejabat Struktural</p>
+        </header>
+        <div class="row gy-4" id="team-container">
+          <!-- Akan diisi oleh JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>***</h2>
+          <p>Layanan Publik</p>
+        </header>
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper" id="clients-container">
+            <!-- Akan diisi oleh JavaScript -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <span> SIMPEG KITA</span>
+            </a>
+            <p>SIMPEG New Version ini merupakan bagian dari penerapan Sistem Pemerintah Berbasis Elektronik (SPBE) sebagaimana diamanatkan Peraturan Presiden Nomor 95 Tahun 2018.</p>
+            <div class="social-links mt-3">
+              <a href="https://www.instagram.com/ropegklhk" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com/@ropegklhk" class="instagram"><i class="bi bi-youtube"></i></a>
+              <a href="https://ropeg.menlhk.go.id/" class="linkedin"><i class="bi bi-globe-americas"></i></a>
+              <a href="https://x.com/KementerianLHK" class="instagram"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.tiktok.com/@ropeg.klhk" class="tiktok"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Link terkait</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://casn.menlhk.go.id/">CASN KLHK</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://seleksijpt.menlhk.go.id/">Seleksi JPT KLHK</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://simpeg.menlhk.go.id/abk">Analisis Beban Kerja KLHK</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://simpeg.menlhk.go.id/simantap">Manajemen Talenta KLHK</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://ppid.menlhk.go.id/">PPID KLHK</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Layanan Lainnya</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://siasn.bkn.go.id/">SIASN BKN</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://myasn.bkn.go.id/">MyASN BKN</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://kinerja.bkn.go.id/login">E-Kinerja BKN</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://dispakati.bkn.go.id/">Dispakati BKN</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://srikandi.arsip.go.id/">Srikandi LAN</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              Gedung Manggala Wanabakti Blok I Lantai 9 <br>
+              Jalan Gatot Subroto Senayan 10270<br>
+              Jakarta Pusat <br><br>
+              <strong>Phone:</strong> 021 - 5730342<br>
+              <strong>Email:</strong> simpegklhk@gmail.com<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Biro SDMO Kementerian Kehutanan</span></strong>. All Rights Reserved
+      </div>
+      <!-- <div class="credits">
+        Designed by <a href="https://ropeg.menlhk.go.id/">Biro Sumber Daya Manusia dan Organisasi</a>
+      </div> -->
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom API Integration JS -->
+  <script>
+  // Konfigurasi API
+  const API_URL = 'https://rosmo.kehutanan.go.id/restapi/api.php';
+  
+  // Fungsi untuk menangani CORS
+  async function fetchWithCORS(url, options = {}) {
+    try {
+      // Coba fetch langsung
+      const response = await fetch(url, options);
+      
+      // Jika berhasil, kembalikan response
+      if (response.ok) {
+        return response;
+      }
+      
+      // Jika gagal karena CORS, coba dengan proxy
+      const corsProxy = `https://cors-anywhere.herokuapp.com/${url}`;
+      const proxyResponse = await fetch(corsProxy, options);
+      
+      if (!proxyResponse.ok) {
+        throw new Error(`HTTP error! status: ${proxyResponse.status}`);
+      }
+      
+      return proxyResponse;
+    } catch (error) {
+      console.error('Fetch error:', error);
+      throw error;
+    }
+  }
+
+  // Fungsi untuk mengambil data dari API
+  async function fetchData() {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const errorElement = document.getElementById('api-error');
+    
+    if (loadingOverlay) loadingOverlay.style.display = 'flex';
+    if (errorElement) errorElement.style.display = 'none';
+    
+    try {
+      const response = await fetchWithCORS(API_URL);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        processData(data.data);
+      } else {
+        throw new Error(data.message || 'Terjadi kesalahan saat memuat data');
+      }
+    } catch (error) {
+      console.error('API Error:', error);
+      if (errorElement) {
+        errorElement.textContent = error.message;
+        errorElement.style.display = 'block';
+        
+        // Sembunyikan error setelah 5 detik
+        setTimeout(() => {
+          errorElement.style.display = 'none';
+        }, 5000);
+      }
+    } finally {
+      if (loadingOverlay) loadingOverlay.style.display = 'none';
+    }
+  }
+
+  // Fungsi untuk memproses dan menampilkan data
+  function processData(apiData) {
+    updateMenu(apiData.menus);
+    updateBackground(apiData.background);
+    updateAbout(apiData.about);
+    updateServices(apiData.layanan);
+    updateStatistics(apiData.stats);
+    updatePocketBooks(apiData.buku_saku);
+    updateStructuralTeam(apiData.struktural);
+    updatePublicServices(apiData.layanan_publik);
+  }
+
+  // Fungsi-fungsi pembantu untuk update setiap section
+  function updateMenu(menus) {
+    const navbar = document.querySelector('#navbar ul');
+    if (!navbar || !menus) return;
+    
+    navbar.innerHTML = '';
+    
+    menus.forEach(menu => {
+      const menuItem = document.createElement('li');
+      const isActive = menu.url.includes('index') ? 'active' : '';
+      //<i class="${menu.icon} me-2"></i>
+      menuItem.innerHTML = `
+        <a class="nav-link scrollto ${isActive}" href="${menu.url}">
+          ${menu.name}
+        </a>
+      `;
+      navbar.appendChild(menuItem);
+    });
+    
+    // Tambahkan tombol Login
+    const loginItem = document.createElement('li');
+    loginItem.innerHTML = `
+      <a class="getstarted scrollto" href="login.php">
+        <i class="bi bi-box-arrow-in-right me-2"></i>Login
+      </a>
+    `;
+    navbar.appendChild(loginItem);
+  }
+
+  function updateBackground(background) {
+    if (!background) return;
+    //linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    const heroSection = document.querySelector('#hero');
+    if (heroSection && background.image_url) {
+      heroSection.style.background = `
+        
+        url('${background.image_url}')
+      `;
+      heroSection.style.backgroundSize = 'cover';
+      heroSection.style.backgroundPosition = 'center';
+    }
+  }
+
+  function updateAbout(about) {
+    if (!about) return;
+    
+    const aboutTitle = document.querySelector('#about h3');
+    const aboutHeading = document.querySelector('#about h2');
+    const aboutDesc = document.getElementById('about-description');
+    const aboutImage = document.getElementById('about-image');
+    
+    if (aboutTitle) aboutTitle.textContent = about.title || 'Tentang kami';
+    if (aboutHeading) aboutHeading.textContent = about.title || 'SIMPEG KLHK';
+    if (aboutDesc) aboutDesc.textContent = about.description || 'Deskripsi tidak tersedia';
+    if (aboutImage && about.image_url) aboutImage.src = about.image_url;
+  }
+
+  function updateServices(services) {
+    const servicesContainer = document.getElementById('services-container');
+    if (!servicesContainer || !services) return;
+    
+    servicesContainer.innerHTML = '';
+    
+    const colors = ['blue', 'orange', 'green', 'red', 'purple', 'pink'];
+    
+    services.forEach((service, index) => {
+      const colorClass = service.color ? '' : colors[index % colors.length];
+      const serviceBox = document.createElement('div');
+      serviceBox.className = `col-lg-4 col-md-6`;
+      serviceBox.setAttribute('data-aos', 'fade-up');
+      serviceBox.setAttribute('data-aos-delay', (index + 2) * 100);
+      //<p>${service.description}</p>
+      // style="${service.color ? `background-color: ${service.color}` : ''}"
+      serviceBox.innerHTML = `
+        <a href="${service.url || '#'}" class="read-more">
+          <div class="service-box ${colorClass} ${service.color}">
+            <i class="${service.icon} icon"></i>
+            <h3>${service.name}</h3>
+            
+          </div>
+        </a>
+      `;
+      
+      servicesContainer.appendChild(serviceBox);
+    });
+  }
+
+  function updateStatistics(stats) {
+    const statsContainer = document.getElementById('stats-container');
+    const statsContainertgl = document.getElementById('stats-containertgl');
+    if (!statsContainer || !stats) return;
+    
+    // Format tanggal
+    statsContainertgl.innerHTML = `${stats.update_date}`;
+    
+    // Buat HTML untuk total pegawai (selalu ditampilkan)
+    let statsHTML = `
+      <div class="col-lg-3 col-md-6">
+        <div class="count-box">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="ri-user-5-line"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="${stats.total || 0}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Jumlah Pegawai</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    
+    // Tambahkan PNS hanya jika nilainya bukan 0
+    if (parseInt(stats.pns) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.pns}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>PNS</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Tambahkan PPPK hanya jika nilainya bukan 0
+    if (parseInt(stats.pppk) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.pppk}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>PPPK</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Tambahkan CPNS hanya jika nilainya bukan 0
+    if (parseInt(stats.cpns) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.cpns}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>CPNS</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Tambahkan TNI/POLRI hanya jika nilainya bukan 0
+    if (parseInt(stats.tni_polri) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.tni_polri}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>TNI/POLRI</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Set HTML ke container
+    statsContainer.innerHTML = statsHTML;
+    
+    // Inisialisasi ulang purecounter
+    if (typeof PureCounter !== 'undefined') {
+      new PureCounter();
+    }
+}
+
+  function updatePocketBooks(pocketBooks) {
+    const faqContainer1 = document.getElementById('faqlist1');
+    const faqContainer2 = document.getElementById('faqlist2');
+    
+    if (!pocketBooks || !faqContainer1 || !faqContainer2) return;
+    
+    faqContainer1.innerHTML = '';
+    faqContainer2.innerHTML = '';
+    
+    // Filter buku saku berdasarkan jenis
+    const simpegBooks = pocketBooks.filter(book => book.jenis.toLowerCase() === 'simpeg');
+    const siasnBooks = pocketBooks.filter(book => book.jenis.toLowerCase() === 'siasn');
+    
+    // Tambahkan buku saku SIMPEG
+    simpegBooks.forEach((book, index) => {
+      const item = document.createElement('div');
+      item.className = 'accordion-item';
+      item.innerHTML = `
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-${index + 1}">
+            ${book.title}
+          </button>
+        </h2>
+        <div id="faq-content-${index + 1}" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+          <div class="accordion-body">
+            ${book.description}
+          </div>
+        </div>
+      `;
+      faqContainer1.appendChild(item);
+    });
+    
+    // Tambahkan buku saku SIASN
+    siasnBooks.forEach((book, index) => {
+      const item = document.createElement('div');
+      item.className = 'accordion-item';
+      item.innerHTML = `
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-${index + 1}">
+            ${book.title}
+          </button>
+        </h2>
+        <div id="faq2-content-${index + 1}" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+          <div class="accordion-body">
+            ${book.description}
+          </div>
+        </div>
+      `;
+      faqContainer2.appendChild(item);
+    });
+  }
+
+  function updateStructuralTeam(structurals) {
+    const teamContainer = document.getElementById('team-container');
+    if (!teamContainer || !structurals) return;
+    
+    teamContainer.innerHTML = '';
+    
+    structurals.forEach((person, index) => {
+      const member = document.createElement('div');
+      member.className = 'col-lg-3 col-md-6 d-flex align-items-stretch';
+      member.setAttribute('data-aos', 'fade-up');
+      member.setAttribute('data-aos-delay', (index + 1) * 100);
+      
+      member.innerHTML = `
+        <div class="member">
+          <div class="member-img">
+            <img src="${person.image_url || 'assets/img/team/team-placeholder.png'}" class="img-fluid" alt="${person.name}" onerror="this.src='assets/img/team/team-placeholder.png'">
+            <div class="social">
+              ${person.social_instagram ? `<a href="${person.social_instagram}"><i class="bi bi-instagram"></i></a>` : ''}
+              ${person.social_youtube ? `<a href="${person.social_youtube}"><i class="bi bi-youtube"></i></a>` : ''}
+              ${person.social_facebook ? `<a href="${person.social_facebook}"><i class="bi bi-facebook"></i></a>` : ''}
+              ${person.social_twitter ? `<a href="${person.social_twitter}"><i class="bi bi-twitter"></i></a>` : ''}
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>${person.name}</h4>
+            <span>${person.position}</span>
+          </div>
+        </div>
+      `;
+      
+      teamContainer.appendChild(member);
+    });
+  }
+
+  function updatePublicServices(services) {
+    const clientsContainer = document.getElementById('clients-container');
+    if (!clientsContainer || !services) return;
+    
+    clientsContainer.innerHTML = '';
+    
+    services.forEach(service => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      slide.innerHTML = `
+        <a href="${service.url || '#'}" target="_blank" title="${service.name}">
+          <img src="${service.image_url || 'assets/img/clients/client-placeholder.png'}" class="img-fluid" alt="${service.name}" onerror="this.src='assets/img/clients/client-placeholder.png'">
+        </a>
+      `;
+      clientsContainer.appendChild(slide);
+    });
+    
+    // Inisialisasi ulang swiper
+    if (typeof Swiper !== 'undefined') {
+      new Swiper('.clients-slider', {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 40
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 50
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 50
+          }
+        }
+      });
+    }
+  }
+
+  // Panggil fungsi fetchData saat halaman dimuat
+  document.addEventListener('DOMContentLoaded', function() {
+    fetchData();
+    
+    // Inisialisasi AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
+  });
+  </script>
+</body>
+</html>
