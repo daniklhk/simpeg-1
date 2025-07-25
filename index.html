@@ -39,10 +39,19 @@
 
 <body>
 
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); z-index: 9998; display: flex; justify-content: center; align-items: center;">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Error Notification -->
+  <div id="api-error" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #ff4444; color: white; padding: 15px; border-radius: 5px; z-index: 9999;"></div>
+
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span>KEHUTANAN</span>
@@ -50,23 +59,15 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Tentang Kami</a></li>
-          <li><a class="nav-link scrollto" href="#services">Layanan</a></li>
-          <li><a class="nav-link scrollto" href="#counts">Statistik</a></li>
-          <li><a class="nav-link scrollto" href="#faq">Buku Saku</a></li>
-          <li><a class="nav-link scrollto" href="#footer">Kontak</a></li>
-          <!-- <li><a class="getstarted scrollto" href="#services">Login</a></li> -->
+          <!-- Menu akan diisi oleh JavaScript -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
-
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
@@ -86,25 +87,19 @@
         </div>
       </div>
     </div>
-
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
-
-    
-
-        <!-- ======= About Section ======= -->
+    <!-- ======= About Section ======= -->
     <section id="about" class="about">
-
       <div class="container" data-aos="fade-up">
         <div class="row gx-0">
-
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
               <h3>Tentang kami</h3>
               <h2>SIMPEG KLHK</h2>
-              <p>
-                Selamat datang di Sistem Informasi Manajemen Kepegawaian KLHK! Kami berkomitmen untuk memberikan layanan terbaik bagi seluruh Aparatur Sipil Negara (ASN) baik PNS maupun PPPK. Di sini, Anda dapat mengakses berbagai layanan melalui SIMPEG KLGK, platform yang memudahkan Anda dalam mengelola data dan informasi kepegawaian.
+              <p id="about-description">
+                <!-- Akan diisi oleh JavaScript -->
               </p>
               <div class="text-center text-lg-start">
                 <a href="https://ropeg.menlhk.go.id/" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
@@ -114,412 +109,109 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img id="about-image" src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
-
         </div>
       </div>
+    </section>
 
-    </section><!-- End About Section -->
-
-  <!-- ======= Services Section =======  -->
+    <!-- ======= Services Section ======= -->
     <section id="services" class="services">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>***</h2>
           <p>Layanan Kami</p>
         </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <a href="https://simpeg.menlhk.go.id/" class="read-more">
-            <div class="service-box blue">
-              <i class="fa fa-id-card icon"></i>
-              <h3>Operator SIMPEG</h3>
-            </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <a href="https://simpeg.menlhk.go.id/" class="read-more">
-            <div class="service-box orange">
-              <i class="fa fa-address-card icon"></i>
-              <h3>Individu SIMPEG</h3>
-            </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <a href="https://simpeg.menlhk.go.id/" class="read-more">
-            <div class="service-box green">
-              <i class="fa fa-user-tie icon"></i>
-              <h3>Validator SIMPEG</h3>
-            </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <a href="https://simpeg.menlhk.go.id/" class="read-more">
-            <div class="service-box red">
-              <i class="fa fa-house-user icon"></i>
-              <h3>ASN Digital</h3>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <a href="https://simpeg.menlhk.go.id/" class="read-more">
-            <div class="service-box purple">
-              <i class="fa fa-user-plus icon"></i>
-              <h3>Operator Perencanaan</h3>
-            </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <a href="https://simpeg.menlhk.go.id/" class="read-more">
-            <div class="service-box pink">
-              <i class="fa fa-money-bill icon"></i>
-              <h3>Operator GPP</h3>
-            </div>
-            </a>
-          </div>
-
+        <div class="row gy-4" id="services-container">
+          <!-- Akan diisi oleh JavaScript -->
         </div>
-
       </div>
-
-    </section> 
-    <!-- End Services Section -->
-
+    </section>
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>***</h2>
           <p>Statistik Kepegawaian</p>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="ri-user-5-line"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="17950" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Jumlah Pegawai</p>
-              </div>
-            </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="ri-user-5-line"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Jumlah Satuan Kerja</p>
-              </div>
-            </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="ri-user-5-line"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Jumlah PPPK</p>
-              </div>
-            </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="ri-user-5-line"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Jumlah CPNS</p>
-              </div>
-            </div>
-            </div>
-          </div>
-
+          <h2 id="stats-containertgl"></h2>
+        </header> 
+        <div class="row gy-4" id="stats-container">
+          <!-- Akan diisi oleh JavaScript -->
         </div>
-        <br>
-        <br>
+        <br><br>
         <div class="section-header">
-        <a href="https://ropeg.menlhk.go.id/Dashboard/" target="_blank"><button class="icon-button"><i class="fa fa-chart-pie"></i>Dashboard Statistik</button></a>
+          <a href="https://ropeg.menlhk.go.id/Dashboard/" target="_blank"><button class="icon-button"><i class="fa fa-chart-pie"></i>Dashboard Statistik</button></a>
         </div>
       </div>
-    </section> <!-- End Counts Section -->
-
+    </section>
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>***</h2>
           <p>Buku Saku</p>
         </header>
-
         <div class="row">
           <div class="col-lg-6">
-            <!-- F.A.Q List 1-->
-
             <h3>SIMPEG</h3>
             <div class="accordion accordion-flush" id="faqlist1">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    Sinkronisasi TMT Jabatan Fungsional pada SIMPEG dan SIASN
-                  </button>
-                </h2>
-                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    <a href="https://drive.google.com/file/d/1AEwqD4EWBOpgO3KEK3hqSGIZWdD9FfIg/view?usp=sharing" target="_blank"><button class="icon-button-small"><i class="fa fa-file"></i>View</button></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    Lupa Password SIASN
-                  </button>
-                </h2>
-                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    <a href="https://drive.google.com/file/d/15M9hld_f3_H5q56GCeUAI6cPMlFk-t1q/view?usp=sharing" target="_blank"><button class="icon-button-small"><i class="fa fa-file"></i>View</button></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    Lupa Password SIMPEG
-                  </button>
-                </h2>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    <a href="https://drive.google.com/file/d/1fNtw4Yc6B8ziyH1o52-53cSB8D9H5Ytp/view?usp=sharing" target="_blank"><button class="icon-button-small"><i class="fa fa-file"></i>View</button></a>
-                  </div>
-                </div>
-              </div>
-
+              <!-- Akan diisi oleh JavaScript -->
             </div>
           </div>
-
           <div class="col-lg-6">
-
-            <!-- F.A.Q List 2-->
             <h3>SIASN</h3>
             <div class="accordion accordion-flush" id="faqlist2">
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                    Menentukan Unit Verifikasi untuk Operator SIASN BKN
-                  </button>
-                </h2>
-                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    <a href="https://drive.google.com/file/d/1FSnbpP1iNJbLFpg3Suuz9wNvMAEZHVuP/view?usp=sharing" target="_blank"><button class="icon-button-small"><i class="fa fa-file"></i>View</button></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
-                    Peremajaan Data SIASN
-                  </button>
-                </h2>
-                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    <a href="https://drive.google.com/file/d/1oHYqbijB2cdIuYSttHixWJVFQSsPUUqQ/view?usp=sharing" target="_blank"><button class="icon-button-small"><i class="fa fa-file"></i>View</button></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
-                    Peremajaan Data SIASN - Tugas Belajar
-                  </button>
-                </h2>
-                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    <a href="https://drive.google.com/file/d/1wrW_Q6Dip6XcJD1w9VNwqZ66rX-PA6hZ/view?usp=sharing" target="_blank"><button class="icon-button-small"><i class="fa fa-file"></i>View</button></a>
-                  </div>
-                </div>
-              </div>
-
+              <!-- Akan diisi oleh JavaScript -->
             </div>
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- End F.A.Q Section -->
-
+    </section>
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>***</h2>
           <p>Pejabat Struktural</p>
         </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dedy Asriady, S.Si., M.P.</h4>
-                <span>Kepala Biro Sumber Daya Manusia dan Organisasi</span>
-                <p>Biro Sumber Daya Manusia dan Organisasi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Hendro Prabowo, S.P.</h4>
-                <span>Kepala Bagian Administrasi Sumber Daya Manusia</span>
-                <p>Biro Sumber Daya Manusia dan Organisasi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Drs. Fajar Wirasmoyo, M.Si.</h4>
-                <span>Kepala Bagian Pengelolaan Jabatan Fungsional, Organisasi dan Tata Laksana</span>
-                <p>Biro Sumber Daya Manusia dan Organisasi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Hari Susana Arini, S.IP.</h4>
-                <span>Kepala Sub Bagian Tata Usaha</span>
-                <p>Biro Sumber Daya Manusia dan Organisasi</p>
-              </div>
-            </div>
-          </div>
-
+        <div class="row gy-4" id="team-container">
+          <!-- Akan diisi oleh JavaScript -->
         </div>
-
       </div>
-
-    </section><!-- End Team Section -->
+    </section>
 
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>***</h2>
           <p>Layanan Publik</p>
         </header>
-
         <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a href="https://sikadirklhk.id/" target="_blank"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="https://myasn.bkn.go.id/" target="_blank"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="https://kinerja.bkn.go.id/login" target="_blank"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="https://siasn-instansi.bkn.go.id/" target="_blank"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="https://ropeg.menlhk.go.id/" target="_blank"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="https://casn.menlhk.go.id/" target="_blank"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="https://srikandi.arsip.go.id/" target="_blank"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="https://siapp.setneg.go.id/" target="_blank"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></a></div>
+          <div class="swiper-wrapper" id="clients-container">
+            <!-- Akan diisi oleh JavaScript -->
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
+    </section>
+  </main>
 
-    </section> <!-- =======End Clients Section -->
-
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer =======  -->
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-    <!-- ======= email =======  
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
               <img src="assets/img/logo.png" alt="">
-              <span> SIMPEG KEHUTANAN</span>
+              <span> SIMPEG KITA</span>
             </a>
-            <p>SIMPEG New Version ini merupakan bagian dari penerapan Sistem Pemerintah Berbasis Elektronik (SPBE) sebagaimana diamanatkan Peraturan Presiden Nomor 95 Tahun 2018. Oleh karena itu, SIMPEG New Version ini juga bagian dari transformasi digital secara terkoordinasi dan berkesinambungan dalam rangka mengembangkan tata kelola pemerintahan yang baik.</p>
+            <p>SIMPEG New Version ini merupakan bagian dari penerapan Sistem Pemerintah Berbasis Elektronik (SPBE) sebagaimana diamanatkan Peraturan Presiden Nomor 95 Tahun 2018.</p>
             <div class="social-links mt-3">
               <a href="https://www.instagram.com/ropegklhk" class="instagram"><i class="bi bi-instagram"></i></a>
               <a href="https://www.youtube.com/@ropegklhk" class="instagram"><i class="bi bi-youtube"></i></a>
@@ -560,26 +252,20 @@
               <strong>Phone:</strong> 021 - 5730342<br>
               <strong>Email:</strong> simpegklhk@gmail.com<br>
             </p>
-
           </div>
-
         </div>
       </div>
     </div>
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>FlexStart BootstrapMade</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Biro SDMO Kementerian Kehutanan</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      <!-- <div class="credits">
         Designed by <a href="https://ropeg.menlhk.go.id/">Biro Sumber Daya Manusia dan Organisasi</a>
-      </div>
+      </div> -->
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -595,6 +281,418 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <!-- Custom API Integration JS -->
+  <script>
+  // Konfigurasi API
+  const API_URL = 'https://rosmo.kehutanan.go.id/restapi/api.php';
+  
+  // Fungsi untuk menangani CORS
+  async function fetchWithCORS(url, options = {}) {
+    try {
+      // Coba fetch langsung
+      const response = await fetch(url, options);
+      
+      // Jika berhasil, kembalikan response
+      if (response.ok) {
+        return response;
+      }
+      
+      // Jika gagal karena CORS, coba dengan proxy
+      const corsProxy = `https://cors-anywhere.herokuapp.com/${url}`;
+      const proxyResponse = await fetch(corsProxy, options);
+      
+      if (!proxyResponse.ok) {
+        throw new Error(`HTTP error! status: ${proxyResponse.status}`);
+      }
+      
+      return proxyResponse;
+    } catch (error) {
+      console.error('Fetch error:', error);
+      throw error;
+    }
+  }
 
+  // Fungsi untuk mengambil data dari API
+  async function fetchData() {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const errorElement = document.getElementById('api-error');
+    
+    if (loadingOverlay) loadingOverlay.style.display = 'flex';
+    if (errorElement) errorElement.style.display = 'none';
+    
+    try {
+      const response = await fetchWithCORS(API_URL);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        processData(data.data);
+      } else {
+        throw new Error(data.message || 'Terjadi kesalahan saat memuat data');
+      }
+    } catch (error) {
+      console.error('API Error:', error);
+      if (errorElement) {
+        errorElement.textContent = error.message;
+        errorElement.style.display = 'block';
+        
+        // Sembunyikan error setelah 5 detik
+        setTimeout(() => {
+          errorElement.style.display = 'none';
+        }, 5000);
+      }
+    } finally {
+      if (loadingOverlay) loadingOverlay.style.display = 'none';
+    }
+  }
+
+  // Fungsi untuk memproses dan menampilkan data
+  function processData(apiData) {
+    updateMenu(apiData.menus);
+    updateBackground(apiData.background);
+    updateAbout(apiData.about);
+    updateServices(apiData.layanan);
+    updateStatistics(apiData.stats);
+    updatePocketBooks(apiData.buku_saku);
+    updateStructuralTeam(apiData.struktural);
+    updatePublicServices(apiData.layanan_publik);
+  }
+
+  // Fungsi-fungsi pembantu untuk update setiap section
+  function updateMenu(menus) {
+    const navbar = document.querySelector('#navbar ul');
+    if (!navbar || !menus) return;
+    
+    navbar.innerHTML = '';
+    
+    menus.forEach(menu => {
+      const menuItem = document.createElement('li');
+      const isActive = menu.url.includes('index') ? 'active' : '';
+      //<i class="${menu.icon} me-2"></i>
+      menuItem.innerHTML = `
+        <a class="nav-link scrollto ${isActive}" href="${menu.url}">
+          ${menu.name}
+        </a>
+      `;
+      navbar.appendChild(menuItem);
+    });
+    
+    // Tambahkan tombol Login
+    const loginItem = document.createElement('li');
+    loginItem.innerHTML = `
+      <a class="getstarted scrollto" href="login.php">
+        <i class="bi bi-box-arrow-in-right me-2"></i>Login
+      </a>
+    `;
+    navbar.appendChild(loginItem);
+  }
+
+  function updateBackground(background) {
+    if (!background) return;
+    //linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    const heroSection = document.querySelector('#hero');
+    if (heroSection && background.image_url) {
+      heroSection.style.background = `
+        
+        url('${background.image_url}')
+      `;
+      heroSection.style.backgroundSize = 'cover';
+      heroSection.style.backgroundPosition = 'center';
+    }
+  }
+
+  function updateAbout(about) {
+    if (!about) return;
+    
+    const aboutTitle = document.querySelector('#about h3');
+    const aboutHeading = document.querySelector('#about h2');
+    const aboutDesc = document.getElementById('about-description');
+    const aboutImage = document.getElementById('about-image');
+    
+    if (aboutTitle) aboutTitle.textContent = about.title || 'Tentang kami';
+    if (aboutHeading) aboutHeading.textContent = about.title || 'SIMPEG KLHK';
+    if (aboutDesc) aboutDesc.textContent = about.description || 'Deskripsi tidak tersedia';
+    if (aboutImage && about.image_url) aboutImage.src = about.image_url;
+  }
+
+  function updateServices(services) {
+    const servicesContainer = document.getElementById('services-container');
+    if (!servicesContainer || !services) return;
+    
+    servicesContainer.innerHTML = '';
+    
+    const colors = ['blue', 'orange', 'green', 'red', 'purple', 'pink'];
+    
+    services.forEach((service, index) => {
+      const colorClass = service.color ? '' : colors[index % colors.length];
+      const serviceBox = document.createElement('div');
+      serviceBox.className = `col-lg-4 col-md-6`;
+      serviceBox.setAttribute('data-aos', 'fade-up');
+      serviceBox.setAttribute('data-aos-delay', (index + 2) * 100);
+      //<p>${service.description}</p>
+      // style="${service.color ? `background-color: ${service.color}` : ''}"
+      serviceBox.innerHTML = `
+        <a href="${service.url || '#'}" class="read-more">
+          <div class="service-box ${colorClass} ${service.color}">
+            <i class="${service.icon} icon"></i>
+            <h3>${service.name}</h3>
+            
+          </div>
+        </a>
+      `;
+      
+      servicesContainer.appendChild(serviceBox);
+    });
+  }
+
+  function updateStatistics(stats) {
+    const statsContainer = document.getElementById('stats-container');
+    const statsContainertgl = document.getElementById('stats-containertgl');
+    if (!statsContainer || !stats) return;
+    
+    // Format tanggal
+    statsContainertgl.innerHTML = `${stats.update_date}`;
+    
+    // Buat HTML untuk total pegawai (selalu ditampilkan)
+    let statsHTML = `
+      <div class="col-lg-3 col-md-6">
+        <div class="count-box">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="ri-user-5-line"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="${stats.total || 0}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Jumlah Pegawai</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    
+    // Tambahkan PNS hanya jika nilainya bukan 0
+    if (parseInt(stats.pns) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.pns}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>PNS</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Tambahkan PPPK hanya jika nilainya bukan 0
+    if (parseInt(stats.pppk) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.pppk}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>PPPK</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Tambahkan CPNS hanya jika nilainya bukan 0
+    if (parseInt(stats.cpns) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.cpns}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>CPNS</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Tambahkan TNI/POLRI hanya jika nilainya bukan 0
+    if (parseInt(stats.tni_polri) > 0) {
+        statsHTML += `
+          <div class="col-lg-2 col-md-6">
+            <div class="count-box">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="ri-user-5-line"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="${stats.tni_polri}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>TNI/POLRI</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+    
+    // Set HTML ke container
+    statsContainer.innerHTML = statsHTML;
+    
+    // Inisialisasi ulang purecounter
+    if (typeof PureCounter !== 'undefined') {
+      new PureCounter();
+    }
+}
+
+  function updatePocketBooks(pocketBooks) {
+    const faqContainer1 = document.getElementById('faqlist1');
+    const faqContainer2 = document.getElementById('faqlist2');
+    
+    if (!pocketBooks || !faqContainer1 || !faqContainer2) return;
+    
+    faqContainer1.innerHTML = '';
+    faqContainer2.innerHTML = '';
+    
+    // Filter buku saku berdasarkan jenis
+    const simpegBooks = pocketBooks.filter(book => book.jenis.toLowerCase() === 'simpeg');
+    const siasnBooks = pocketBooks.filter(book => book.jenis.toLowerCase() === 'siasn');
+    
+    // Tambahkan buku saku SIMPEG
+    simpegBooks.forEach((book, index) => {
+      const item = document.createElement('div');
+      item.className = 'accordion-item';
+      item.innerHTML = `
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-${index + 1}">
+            ${book.title}
+          </button>
+        </h2>
+        <div id="faq-content-${index + 1}" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+          <div class="accordion-body">
+            ${book.description}
+          </div>
+        </div>
+      `;
+      faqContainer1.appendChild(item);
+    });
+    
+    // Tambahkan buku saku SIASN
+    siasnBooks.forEach((book, index) => {
+      const item = document.createElement('div');
+      item.className = 'accordion-item';
+      item.innerHTML = `
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-${index + 1}">
+            ${book.title}
+          </button>
+        </h2>
+        <div id="faq2-content-${index + 1}" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+          <div class="accordion-body">
+            ${book.description}
+          </div>
+        </div>
+      `;
+      faqContainer2.appendChild(item);
+    });
+  }
+
+  function updateStructuralTeam(structurals) {
+    const teamContainer = document.getElementById('team-container');
+    if (!teamContainer || !structurals) return;
+    
+    teamContainer.innerHTML = '';
+    
+    structurals.forEach((person, index) => {
+      const member = document.createElement('div');
+      member.className = 'col-lg-3 col-md-6 d-flex align-items-stretch';
+      member.setAttribute('data-aos', 'fade-up');
+      member.setAttribute('data-aos-delay', (index + 1) * 100);
+      
+      member.innerHTML = `
+        <div class="member">
+          <div class="member-img">
+            <img src="${person.image_url || 'assets/img/team/team-placeholder.png'}" class="img-fluid" alt="${person.name}" onerror="this.src='assets/img/team/team-placeholder.png'">
+            <div class="social">
+              ${person.social_instagram ? `<a href="${person.social_instagram}"><i class="bi bi-instagram"></i></a>` : ''}
+              ${person.social_youtube ? `<a href="${person.social_youtube}"><i class="bi bi-youtube"></i></a>` : ''}
+              ${person.social_facebook ? `<a href="${person.social_facebook}"><i class="bi bi-facebook"></i></a>` : ''}
+              ${person.social_twitter ? `<a href="${person.social_twitter}"><i class="bi bi-twitter"></i></a>` : ''}
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>${person.name}</h4>
+            <span>${person.position}</span>
+          </div>
+        </div>
+      `;
+      
+      teamContainer.appendChild(member);
+    });
+  }
+
+  function updatePublicServices(services) {
+    const clientsContainer = document.getElementById('clients-container');
+    if (!clientsContainer || !services) return;
+    
+    clientsContainer.innerHTML = '';
+    
+    services.forEach(service => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      slide.innerHTML = `
+        <a href="${service.url || '#'}" target="_blank" title="${service.name}">
+          <img src="${service.image_url || 'assets/img/clients/client-placeholder.png'}" class="img-fluid" alt="${service.name}" onerror="this.src='assets/img/clients/client-placeholder.png'">
+        </a>
+      `;
+      clientsContainer.appendChild(slide);
+    });
+    
+    // Inisialisasi ulang swiper
+    if (typeof Swiper !== 'undefined') {
+      new Swiper('.clients-slider', {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 40
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 50
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 50
+          }
+        }
+      });
+    }
+  }
+
+  // Panggil fungsi fetchData saat halaman dimuat
+  document.addEventListener('DOMContentLoaded', function() {
+    fetchData();
+    
+    // Inisialisasi AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
+  });
+  </script>
+</body>
 </html>
